@@ -38,9 +38,4 @@ function playTrack(index){
 // Quando finisce una traccia, avvia la successiva
 music.addEventListener('ended', ()=> playTrack(currentTrack + 1));
 
-  // Avvia la musica al primo gesto dell'utente (click o tasto)
-  function handleFirstGesture(){
-    if (!playing) playTrack(currentTrack);
-  }
-  globalThis.addEventListener('click', handleFirstGesture, { once: true });
-  globalThis.addEventListener('keydown', handleFirstGesture, { once: true });
+  
